@@ -138,7 +138,7 @@ dependencies {
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile 'com.google.android.gms:play-services-wearable:+'
     //compile 'com.google.android.gms:play-services-base:11.0.2'
-    wearApp files('sensor-release.apk')
+    wearApp project(':sensor')
 }
 
 // Run this once to be able to run the application with BUCK

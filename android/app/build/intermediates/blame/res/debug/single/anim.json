@@ -28,16 +28,16 @@
         "source": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_slide_in_bottom.xml"
-    },
-    {
         "merged": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
         "source": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/res/merged/debug/anim/slide_down.xml",

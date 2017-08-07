@@ -131,42 +131,6 @@ MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/a
 MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:17:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.2/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
@@ -270,42 +234,6 @@ MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/a
 MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-tasks:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.2/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
 	android:label
 		ADDED from /Users/reva/Developer/android/sensor-wear/android/app/src/main/AndroidManifest.xml:16:7-39
 	android:allowBackup
@@ -348,7 +276,6 @@ android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
 IMPLIED from /Users/reva/Developer/android/sensor-wear/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:19:9-172
-MERGED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:19:9-172
 	android:exported
 		ADDED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:19:146-170
 	android:theme
@@ -357,8 +284,6 @@ MERGED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Devel
 		ADDED from [com.google.android.gms:play-services-base:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.2/AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:20:9-121
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:20:9-121
-MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:20:9-121
 MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:20:9-121
 MERGED from [com.google.android.gms:play-services-basement:11.0.2] /Users/reva/Developer/android/sensor-wear/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/AndroidManifest.xml:20:9-121
 	android:value

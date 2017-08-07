@@ -62,6 +62,7 @@ public class WearCommunicationModule extends ReactContextBaseJavaModule
       for (Node node : nodes) {
         Wearable.MessageApi.sendMessage(googleApiClient, node.getId(), "/increase_wear_counter", null);
         Toast.makeText(getReactApplicationContext(), "Message sended to " + node.getDisplayName(), Toast.LENGTH_LONG).show();
+        Log.i(TAG, "Message sended to " + node.getDisplayName());
       }
     } else {
       Toast.makeText(getReactApplicationContext(), "No connected nodes found", Toast.LENGTH_SHORT).show();
