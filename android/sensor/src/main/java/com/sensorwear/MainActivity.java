@@ -1,5 +1,9 @@
 package com.sensorwear;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.util.Log;
@@ -19,13 +23,18 @@ import com.sensorwear.R;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends WearableActivity
-        implements GoogleApiClient.ConnectionCallbacks, MessageApi.MessageListener {
+    implements
+        GoogleApiClient.ConnectionCallbacks,
+        MessageApi.MessageListener,
+        SensorEventListener {
 
     private static final String TAG = "Sensor";
 
     private GoogleApiClient mGoogleApiClient = null;
+    SensorManager mSensorManager = null;
     private TextView mTextView;
 
     @Override
@@ -44,6 +53,9 @@ public class MainActivity extends WearableActivity
                 .addApi(Wearable.API)
                 .addConnectionCallbacks(this)
                 .build();
+
+        startMesurements();
+        logAvailableSensors();
     }
 
     public void onButtonClicked(View target) {
@@ -62,7 +74,7 @@ public class MainActivity extends WearableActivity
      * sends a string message to the connected handheld using the google api client (if available)
      * @param message
      */
-    private void sendMessageToHandheld(final String message) {
+    public void sendMessageToHandheld(final String message) {
 
         if (mGoogleApiClient == null)
             return;
@@ -107,6 +119,39 @@ public class MainActivity extends WearableActivity
     @Override
     public void onConnectionSuspended(final int i) {
         Log.i(TAG, "Connection suspended");
+    }
+
+    private void startMesurements() {
+        mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
+        Sensor mAccelerometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        Sensor mSigMotion = mSensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
+        mSensorManager.registerListener(this, mAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        TriggerListener mListener = new TriggerListener(this);
+        mSensorManager.requestTriggerSensor(mListener, mSigMotion);
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            String msg = "" + (int)sensorEvent.values[0];
+            //Log.i(TAG, msg);
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        Log.i(TAG, "onAccuracyChanged - accuracy: " + accuracy);
+    }
+
+    private void logAvailableSensors() {
+        final List<Sensor> sensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+        Log.i(TAG, "=== LIST AVAILABLE SENSORS ===");
+        Log.i(TAG, String.format(Locale.getDefault(), "|%-35s|%-38s|%-6s|", "SensorName", "StringType", "Type"));
+        for (Sensor sensor : sensors) {
+            Log.i(TAG, String.format(Locale.getDefault(), "|%-35s|%-38s|%-6s|", sensor.getName(), sensor.getStringType(), sensor.getType()));
+        }
+
+        Log.i(TAG, "=== LIST AVAILABLE SENSORS ===");
     }
 
 }
