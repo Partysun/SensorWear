@@ -18,7 +18,6 @@ public class TriggerListener extends TriggerEventListener {
     @Override
     public void onTrigger(TriggerEvent event) {
         if (event.values[0] == 1) {
-
             Log.i("Sensor", "Motion");
         }
     }

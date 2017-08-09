@@ -4,12 +4,14 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.TriggerEvent;
 import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.util.Log;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -32,22 +34,18 @@ public class MainActivity extends WearableActivity
         SensorEventListener {
 
     private static final String TAG = "Sensor";
+    private static final Integer RECORD_DURATION = 1;
 
     private GoogleApiClient mGoogleApiClient = null;
-    SensorManager mSensorManager = null;
-    private TextView mTextView;
+    private SensorManager mSensorManager = null;
+    private Sensor mStepCountSensor = null;
+    private boolean isAlarm = false;
+    private boolean isSigMotion = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
-        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
-            @Override
-            public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
-            }
-        });
 
         mGoogleApiClient = new GoogleApiClient  .Builder(this)
                 .addApi(Wearable.API)
@@ -55,13 +53,13 @@ public class MainActivity extends WearableActivity
                 .build();
 
         startMesurements();
-        logAvailableSensors();
+        //logAvailableSensors();
     }
 
     public void onButtonClicked(View target) {
-        Log.i(TAG, "Alarm Button");
-        //alert("che");
-        sendMessageToHandheld("0");
+        if(!isSigMotion) {
+            startStepCounter();
+        }
     }
 
     @Override
@@ -74,7 +72,7 @@ public class MainActivity extends WearableActivity
      * sends a string message to the connected handheld using the google api client (if available)
      * @param message
      */
-    public void sendMessageToHandheld(final String message) {
+    public void sendMessageToHandheld(final String path, final String message) {
 
         if (mGoogleApiClient == null)
             return;
@@ -86,11 +84,9 @@ public class MainActivity extends WearableActivity
             @Override
             public void onResult(NodeApi.GetConnectedNodesResult result) {
                 final List<Node> nodes = result.getNodes();
-                final String path = "/increase_phone_counter";
 
                 for (Node node : nodes) {
-                    Log.i(TAG, "SEND MESSAGE TO HANDHELD: " + message + " , node: " + node.getDisplayName());
-
+                    Log.i(TAG, "SEND MESSAGE TO HANDHELD: " + path + " > " + message + " , node: " + node.getDisplayName());
                     byte[] data = message.getBytes(StandardCharsets.UTF_8);
                     Wearable.MessageApi.sendMessage(mGoogleApiClient, node.getId(), path, data);
                 }
@@ -107,9 +103,25 @@ public class MainActivity extends WearableActivity
 
     @Override
     public void onMessageReceived(final MessageEvent messageEvent) {
-
         final String path = messageEvent.getPath();
         switch (path) {
+            case "/toggleAlarm":
+                isAlarm = !isAlarm;
+                if (!isAlarm) {
+                    stopStepCounter();
+                }
+                Toast.makeText(this, "Alarm " + isAlarm, Toast.LENGTH_SHORT).show();
+                sendMessageToHandheld("/toggleAlarm", isAlarm + "");
+                break;
+            case "/stopStepCounter":
+                stopStepCounter();
+                break;
+            case "/reset":
+                isSigMotion = false;
+                isAlarm = false;
+                finish();
+                startActivity(getIntent());
+                break;
             default:
                 Log.i(TAG, "Message " + path + " > " + new String(messageEvent.getData()));
                 break;
@@ -121,26 +133,46 @@ public class MainActivity extends WearableActivity
         Log.i(TAG, "Connection suspended");
     }
 
+    private void startStepCounter() {
+        Log.i(TAG, "Start Step Counter Sensor");
+        isSigMotion = true;
+        sendMessageToHandheld("/sigMotion", "");
+        mStepCountSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        mSensorManager.registerListener(this, mStepCountSensor, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    private void stopStepCounter() {
+        Log.i(TAG, "Stop Step Counter Sensor");
+        isSigMotion = false;
+        mSensorManager.unregisterListener(this, mStepCountSensor);
+    }
+
     private void startMesurements() {
         mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
-        Sensor mAccelerometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         Sensor mSigMotion = mSensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
-        mSensorManager.registerListener(this, mAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        TriggerListener mListener = new TriggerListener(this);
+        TriggerListener mListener = new TriggerListener(this) {
+            @Override
+            public void onTrigger(TriggerEvent event) {
+                if (event.values[0] == 1 && !isSigMotion) {
+                    startStepCounter();
+                }
+            }
+        };
         mSensorManager.requestTriggerSensor(mListener, mSigMotion);
     }
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            String msg = "" + (int)sensorEvent.values[0];
-            //Log.i(TAG, msg);
+        if (sensorEvent.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
+            String msg = (int)sensorEvent.values[0] + "";
+            Log.d(TAG, msg);
+            sendMessageToHandheld("/steps", msg);
         }
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        Log.i(TAG, "onAccuracyChanged - accuracy: " + accuracy);
+        Log.d(TAG, "onAccuracyChanged - accuracy: " + accuracy);
     }
 
     private void logAvailableSensors() {
