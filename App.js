@@ -74,10 +74,10 @@ export default class App extends React.Component {
 
   toggleSigMotion() {
     ToastAndroid.show('Detect Signigicant Motion!', ToastAndroid.SHORT);
-    const currentSigMotion = this.state.sigMotion;
-    this.setState({
-      sigMotion: !currentSigMotion
-    });
+    //const currentSigMotion = this.state.sigMotion;
+    //this.setState({
+      //sigMotion: !currentSigMotion
+    //});
   }
 
   toggleAlarm({isAlarm}) {

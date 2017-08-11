@@ -39,8 +39,16 @@ public class MainActivity extends WearableActivity
     private GoogleApiClient mGoogleApiClient = null;
     private SensorManager mSensorManager = null;
     private Sensor mStepCountSensor = null;
+    private Sensor mSigMotion;
+    private TriggerListener mListener;
     private boolean isAlarm = false;
     private boolean isSigMotion = false;
+
+    public void onButtonClicked(View target) {
+        if(!isSigMotion) {
+            startStepCounter();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,20 +64,41 @@ public class MainActivity extends WearableActivity
         //logAvailableSensors();
     }
 
-    public void onButtonClicked(View target) {
-        if(!isSigMotion) {
-            startStepCounter();
-        }
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(mGoogleApiClient != null && !(mGoogleApiClient.isConnected() || mGoogleApiClient.isConnecting())) {
+            mGoogleApiClient.connect();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(mGoogleApiClient != null )
+            mGoogleApiClient.unregisterConnectionCallbacks(this);
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onStop() {
+        if (mSigMotion != null) mSensorManager.cancelTriggerSensor(mListener, mSigMotion);
+        if (mGoogleApiClient != null) {
+            Wearable.MessageApi.removeListener(mGoogleApiClient, this);
+            if (mGoogleApiClient.isConnected()) {
+                mGoogleApiClient.disconnect();
+            }
+        }
+        super.onStop();
+    }
+
     /**
-     * sends a string message to the connected handheld using the google api client (if available)
+     * Sends a string message to the connected handheld using the google api client (if available)
      * @param message
      */
     public void sendMessageToHandheld(final String path, final String message) {
@@ -130,7 +159,7 @@ public class MainActivity extends WearableActivity
 
     @Override
     public void onConnectionSuspended(final int i) {
-        Log.i(TAG, "Connection suspended");
+        Log.e(TAG, "onConnectionSuspended: " + (i == CAUSE_NETWORK_LOST ? "NETWORK LOST" : "SERVICE_DISCONNECTED"));
     }
 
     private void startStepCounter() {
@@ -149,8 +178,8 @@ public class MainActivity extends WearableActivity
 
     private void startMesurements() {
         mSensorManager = ((SensorManager)getSystemService(SENSOR_SERVICE));
-        Sensor mSigMotion = mSensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
-        TriggerListener mListener = new TriggerListener(this) {
+        mSigMotion = mSensorManager.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
+        mListener = new TriggerListener(this) {
             @Override
             public void onTrigger(TriggerEvent event) {
                 if (event.values[0] == 1 && !isSigMotion) {
